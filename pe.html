@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="pe.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="sidebar">
+      <h2 class="logo"><i class="fa-solid fa-leaf"></i> SaveWise</h2>
+      <ul>
+        <li><i class="fa-solid fa-house"></i> Dashboard</li>
+        <li class="active"><i class="fa-solid fa-plus"></i> Add Transaction</li>
+        <li><i class="fa-solid fa-folder"></i> Categories</li>
+      </ul>
+      <div class="dark-mode"><i class="fa-solid fa-moon"></i> Dark Mode</div>
+    </div>
+
+    
+    <div class="form-section">
+      <div class="form-box">
+        <h2>Add Transaction</h2>
+        <p>Enter the details of your income or expense.</p>
+
+        <div class="toggle">
+          <button class="active"><i class="fa-solid fa-arrow-down"></i> Income</button>
+          <button><i class="fa-solid fa-arrow-up"></i> Expense</button>
+        </div>
+
+        <form>
+          <label>Name</label>
+          <input type="text" placeholder="Salary">
+
+          <label>Amount</label>
+          <input type="number" placeholder="$0.00">
+
+          <label>Category</label>
+          <select>
+            <option>Select category</option>
+          </select>
+
+          <label>Date</label>
+          <input type="date">
+
+          <label>Description (optional)</label>
+          <textarea placeholder="Add a note..."></textarea>
+
+          <button class="submit"><i class="fa-solid fa-leaf"></i> Add Transaction</button>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="categories">
+      <h3>Popular Categories</h3>
+      <ul>
+        <li><i class="fa-solid fa-money-bill"></i> Salary <span>Monthly income</span></li>
+        <li><i class="fa-solid fa-briefcase"></i> Business <span>Business earnings</span></li>
+        <li><i class="fa-solid fa-laptop-code"></i> Freelance <span>Freelance work</span></li>
+        <li><i class="fa-solid fa-gift"></i> Gift <span>Gifts & surprises</span></li>
+        <li><i class="fa-solid fa-ellipsis"></i> Other <span>Other income</span></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
