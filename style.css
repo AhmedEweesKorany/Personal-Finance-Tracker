@@ -152,6 +152,37 @@ section{
     grid-template-rows: repeat(2,1fr);
     gap:20px;
 }
+
+.div-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.div-input input{
+    width:250px;
+    height:40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    margin:10px 0;
+    text-align: center;
+    background-color: rgb(188, 212, 158);
+    font-size: 16px;
+}
+.div-input input::placeholder{
+    color:brown;  
+}
+
+
+
+
+
+
+
 .card{
     height: fit-content;
     background-color: whitesmoke;
