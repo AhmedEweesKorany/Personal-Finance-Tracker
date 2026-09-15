@@ -1,9 +1,18 @@
+/* shared reset */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-section{
+
+body > header *,
+body > main *,
+.shell *{
+text-transform:capitalize;
+}
+
+/* category page */
+body > section{
     width:100%;
     min-height: 100vh;
     background-color: rgb(224, 231, 229);
@@ -265,6 +274,8 @@ hr{
         display: none;
     }
 }
+
+/* landing page */
 html{
 scroll-behavior:smooth;
 }
@@ -588,6 +599,7 @@ display:block;
 color:#1d7a52;
 font-size:16px;
 }
+/* analytics page */
 .shell{
 display:flex;
 min-height:100vh;
@@ -734,6 +746,7 @@ margin:4px 0 2px;
 font-size:11px;
 color:#a5b4bf;
 }
+/* analytics responsive */
 @media(max-width:900px){
 .sidebar{
 width:76px;
@@ -798,6 +811,7 @@ align-items:flex-start;
 grid-template-columns:1fr;
 }
 }
+/* landing page responsive */
 @media(max-width:1000px){
 .hero-title{
 font-size:44px;
