@@ -20,13 +20,4 @@ function setactive() {
 
 window.addEventListener("scroll", setactive);
 
-let sidelinks = document.querySelectorAll(".side-link");
-sidelinks.forEach(function (link) {
-    link.addEventListener("click", function () {
-        sidelinks.forEach(function (l) {
-            l.classList.remove("on");
-        });
-        link.classList.add("on");
-    });
-});
 setactive();
