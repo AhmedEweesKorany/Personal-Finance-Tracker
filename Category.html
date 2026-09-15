@@ -4,61 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>savewise - category</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
-        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
-<body>
+<body class="category-page">
 
-    <section>
-        <div class="title">
-            <div class="title1">
-
-                <i class="fa-solid fa-leaf"></i>
-                <h2>SaveWise</h2>
+    <div class="shell">
+        <aside class="sidebar">
+            <div class="side-logo">
+                <span class="logo-icon"><i class="fa-solid fa-leaf"></i></span>
+                <span>savewise</span>
             </div>
+            <nav class="side-menu">
+                <a href="analytics.html" class="side-link"><i class="fa-solid fa-chart-column"></i>analytics</a>
+                <a href="#" class="side-link"><i class="fa-solid fa-plus"></i>add transaction</a>
+                <a href="Category.html" class="side-link on"><i class="fa-solid fa-list-ul"></i>category</a>
+            </nav>
+        </aside>
 
-            <ul>
-                <li>
-                    <i class="fa-solid fa-border-all"></i>
-                    <span>dashboard</span>
-
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-plus"></i>
-                    <span>add transaction</span>
-                </li>
-
-
-                <li class="active-link">
-                    <i class="fa-solid fa-list-ul"></i>
-                    <span>categories</span>
-                </li>
-
-
-
-
-
-
-            </ul>
-
-
-            <!-- <div class="mode">
-                <i class="fa-solid fa-sun"></i>
-                <p>dark mode</p>
-                <div class="parent">
-                    <div class="child"></div>
-                </div>
-            </div> -->
-
-        </div>
-
-
-        <div class="category-content">
+        <main class="content category-content">
 
             <div class="category-head">
                 <div>
@@ -195,14 +164,12 @@
 
 
 
-        </div>
+        </main>
+    </div>
 
 
 
-    </section>
-
-
-
+<script src="main.js"></script>
 </body>
 
 </html>
