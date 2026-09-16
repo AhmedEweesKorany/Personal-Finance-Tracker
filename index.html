@@ -8,16 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body class="app-page category-page">
 
     <div class="app-shell">
         <aside class="app-sidebar">
-            <div class="app-sidebar__brand">
+            <a href="landing.html" class="app-sidebar__brand">
                 <span class="app-sidebar__brand-icon"><i class="fa-solid fa-leaf"></i></span>
                 <span>savewise</span>
-            </div>
+            </a>
             <nav class="app-sidebar__nav">
                 <a href="analytics.html" class="app-sidebar__link"><i class="fa-solid fa-border-all"></i>dashboard</a>
                 <a href="pe.html" class="app-sidebar__link"><i class="fa-solid fa-plus"></i>add transaction</a>
@@ -41,100 +41,36 @@
 
             <div class="category-add-form">
                 <input type="text" class="category-add-form__input category-add-form__input--name" placeholder="Enter category Name">
-                <input type="number" class="category-add-form__input category-add-form__input--count" placeholder="Enter transactions number">
+                <select class="category-add-form__input category-add-form__input--icon" aria-label="Choose category icon">
+                    <option value="" disabled selected>Choose icon</option>
+                    <option value="food">Food</option>
+                    <option value="transport">Transportation</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="fun">Entertainment</option>
+                    <option value="bills">Bills</option>
+                    <option value="other">Other</option>
+                </select>
             </div>
 
         <div class="category-cards">
-            <div class="category-card">
-                <i class="fa-solid fa-utensils category-card__icon category-card__icon--food"></i>
-                <div class="category-card__meta">
-                  <h2 class="category-card__name">food</h2>
-                  <p class="category-card__count">12 transactions</p>
-                </div>
-
-                <hr class="category-card__divider">
-
-                <div class="category-card__actions">
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-regular fa-trash-can"></i>
-                </div>
-            </div>
-            <div class="category-card">
-                <i class="fa-solid fa-bus-simple category-card__icon category-card__icon--transport"></i>
-                <div class="category-card__meta">
-                  <h2 class="category-card__name">transportation</h2>
-                  <p class="category-card__count">7 transactions</p>
-                </div>
-
-                <hr class="category-card__divider">
-
-                <div class="category-card__actions">
-                <i class="fa-solid fa-pen"></i>
-               <i class="fa-regular fa-trash-can"></i>
-                </div>
-            </div>
-            <div class="category-card">
-                <i class="fa-solid fa-bag-shopping category-card__icon category-card__icon--shopping"></i>
-                <div class="category-card__meta">
-                  <h2 class="category-card__name">shopping</h2>
-                  <p class="category-card__count">5 transactions</p>
-                </div>
-
-                <hr class="category-card__divider">
-
-                <div class="category-card__actions">
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-regular fa-trash-can"></i>
-                </div>
-            </div>
-            <div class="category-card">
-                <i class="fa-solid fa-children category-card__icon category-card__icon--fun"></i>
-                <div class="category-card__meta">
-                  <h2 class="category-card__name">entertainment</h2>
-                  <p class="category-card__count">4 transactions</p>
-                </div>
-
-                <hr class="category-card__divider">
-
-                <div class="category-card__actions">
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-regular fa-trash-can"></i>
-                </div>
-            </div>
-            <div class="category-card">
-                <i class="fa-regular fa-file-lines category-card__icon category-card__icon--bills"></i>
-                <div class="category-card__meta">
-                  <h2 class="category-card__name">bills</h2>
-                  <p class="category-card__count">3 transactions</p>
-                </div>
-
-                <hr class="category-card__divider">
-
-                <div class="category-card__actions">
-                <i class="fa-solid fa-pen"></i>
-               <i class="fa-regular fa-trash-can"></i>
-                </div>
-            </div>
-            <div class="category-card">
-                <i class="fa-solid fa-ellipsis category-card__icon category-card__icon--other"></i>
-                <div class="category-card__meta">
-                  <h2 class="category-card__name">other</h2>
-                  <p class="category-card__count">4 transactions</p>
-                </div>
-
-                <hr class="category-card__divider">
-
-                <div class="category-card__actions">
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-regular fa-trash-can"></i>
-                </div>
-            </div>
-
+            
         </div>
 
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <div class="cat-modal" id="catModal" hidden>
+        <div class="cat-modal-box">
+            <div class="cat-modal-top">
+                <h2 class="cat-modal-title">Category</h2>
+                <button class="cat-modal-close" type="button"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <p class="cat-modal-count"></p>
+            <ul class="cat-modal-list"></ul>
+        </div>
+    </div>
+
+    <script src="store.js?v=2"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
