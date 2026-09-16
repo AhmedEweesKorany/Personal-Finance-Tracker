@@ -12,52 +12,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="category-page">
+<body class="app-page category-page">
 
-    <div class="shell">
-        <aside class="sidebar">
-            <div class="side-logo">
-                <span class="logo-icon"><i class="fa-solid fa-leaf"></i></span>
+    <div class="app-shell">
+        <aside class="app-sidebar">
+            <div class="app-sidebar__brand">
+                <span class="app-sidebar__brand-icon"><i class="fa-solid fa-leaf"></i></span>
                 <span>savewise</span>
             </div>
-            <nav class="side-menu">
-                <a href="analytics.html" class="side-link"><i class="fa-solid fa-chart-column"></i>analytics</a>
-                <a href="#" class="side-link"><i class="fa-solid fa-plus"></i>add transaction</a>
-                <a href="Category.html" class="side-link on"><i class="fa-solid fa-list-ul"></i>category</a>
+            <nav class="app-sidebar__nav">
+                <a href="analytics.html" class="app-sidebar__link"><i class="fa-solid fa-chart-column"></i>analytics</a>
+                <a href="pe.html" class="app-sidebar__link"><i class="fa-solid fa-plus"></i>add transaction</a>
+                <a href="Category.html" class="app-sidebar__link app-sidebar__link--active"><i class="fa-solid fa-list-ul"></i>category</a>
             </nav>
         </aside>
 
-        <main class="content category-content">
+        <main class="app-content category-content">
 
             <div class="category-head">
                 <div>
-                    <h1>categories</h1>
-                    <p>manage your expense categories.</p>
+                    <h1 class="category-head__title">categories</h1>
+                    <p class="category-head__subtitle">manage your expense categories.</p>
                 </div>
 
-                <button>
+                <button class="category-head__add-btn">
                     <i class="fa-solid fa-plus"></i>
                     add category
                 </button>
             </div>
 
-
-
+            <div class="category-add-form">
+                <input type="text" class="category-add-form__input category-add-form__input--name" placeholder="Enter category Name">
+                <input type="number" class="category-add-form__input category-add-form__input--count" placeholder="Enter transactions number">
+            </div>
 
             <div class="category-cards">
                 <div class="category-card">
 
-                    <i class="fa-solid fa-utensils category-icon cat-food"></i>
-                    <div class="category-meta">
-                        <h2>food</h2>
-                        <p>12 transactions</p>
+                    <i class="fa-solid fa-utensils category-card__icon category-card__icon--food"></i>
+                    <div class="category-card__meta">
+                        <h2 class="category-card__name">food</h2>
+                        <p class="category-card__count">12 transactions</p>
                     </div>
-                    <p class="category-percent">32%</p>
+                    <p class="category-card__percent">32%</p>
 
-                    <hr>
+                    <hr class="category-card__divider">
 
 
-                    <div class="category-actions">
+                    <div class="category-card__actions">
 
                         <i class="fa-solid fa-pen"></i>
                         <i class="fa-regular fa-trash-can"></i>
@@ -66,17 +68,17 @@
                 </div>
                 <div class="category-card">
 
-                    <i class="fa-solid fa-bus-simple category-icon cat-transport"></i>
-                    <div class="category-meta">
-                        <h2>transportation</h2>
-                        <p>7 transactions</p>
+                    <i class="fa-solid fa-bus-simple category-card__icon category-card__icon--transport"></i>
+                    <div class="category-card__meta">
+                        <h2 class="category-card__name">transportation</h2>
+                        <p class="category-card__count">7 transactions</p>
                     </div>
-                    <p class="category-percent">18%</p>
+                    <p class="category-card__percent">18%</p>
 
-                    <hr>
+                    <hr class="category-card__divider">
 
 
-                    <div class="category-actions">
+                    <div class="category-card__actions">
 
                         <i class="fa-solid fa-pen"></i>
                         <i class="fa-regular fa-trash-can"></i>
@@ -85,17 +87,17 @@
                 </div>
                 <div class="category-card">
 
-                    <i class="fa-solid fa-bag-shopping category-icon cat-shopping"></i>
-                    <div class="category-meta">
-                        <h2>shopping</h2>
-                        <p>5 transactions</p>
+                    <i class="fa-solid fa-bag-shopping category-card__icon category-card__icon--shopping"></i>
+                    <div class="category-card__meta">
+                        <h2 class="category-card__name">shopping</h2>
+                        <p class="category-card__count">5 transactions</p>
                     </div>
-                    <p class="category-percent">14%</p>
+                    <p class="category-card__percent">14%</p>
 
-                    <hr>
+                    <hr class="category-card__divider">
 
 
-                    <div class="category-actions">
+                    <div class="category-card__actions">
 
                         <i class="fa-solid fa-pen"></i>
                         <i class="fa-regular fa-trash-can"></i>
@@ -104,17 +106,17 @@
                 </div>
                 <div class="category-card">
 
-                    <i class="fa-solid fa-children category-icon cat-fun"></i>
-                    <div class="category-meta">
-                        <h2>entertainment</h2>
-                        <p>4 transactions</p>
+                    <i class="fa-solid fa-children category-card__icon category-card__icon--fun"></i>
+                    <div class="category-card__meta">
+                        <h2 class="category-card__name">entertainment</h2>
+                        <p class="category-card__count">4 transactions</p>
                     </div>
-                    <p class="category-percent">12%</p>
+                    <p class="category-card__percent">12%</p>
 
-                    <hr>
+                    <hr class="category-card__divider">
 
 
-                    <div class="category-actions">
+                    <div class="category-card__actions">
 
                         <i class="fa-solid fa-pen"></i>
                         <i class="fa-regular fa-trash-can"></i>
@@ -123,17 +125,17 @@
                 </div>
                 <div class="category-card">
 
-                    <i class="fa-regular fa-file-lines category-icon cat-bills"></i>
-                    <div class="category-meta">
-                        <h2>bills</h2>
-                        <p>3 transactions</p>
+                    <i class="fa-regular fa-file-lines category-card__icon category-card__icon--bills"></i>
+                    <div class="category-card__meta">
+                        <h2 class="category-card__name">bills</h2>
+                        <p class="category-card__count">3 transactions</p>
                     </div>
-                    <p class="category-percent">10%</p>
+                    <p class="category-card__percent">10%</p>
 
-                    <hr>
+                    <hr class="category-card__divider">
 
 
-                    <div class="category-actions">
+                    <div class="category-card__actions">
 
                         <i class="fa-solid fa-pen"></i>
                         <i class="fa-regular fa-trash-can"></i>
@@ -142,17 +144,17 @@
                 </div>
                 <div class="category-card">
 
-                    <i class="fa-solid fa-ellipsis category-icon cat-other"></i>
-                    <div class="category-meta">
-                        <h2>other</h2>
-                        <p>4 transactions</p>
+                    <i class="fa-solid fa-ellipsis category-card__icon category-card__icon--other"></i>
+                    <div class="category-card__meta">
+                        <h2 class="category-card__name">other</h2>
+                        <p class="category-card__count">4 transactions</p>
                     </div>
-                    <p class="category-percent">14%</p>
+                    <p class="category-card__percent">14%</p>
 
-                    <hr>
+                    <hr class="category-card__divider">
 
 
-                    <div class="category-actions">
+                    <div class="category-card__actions">
 
                         <i class="fa-solid fa-pen"></i>
                         <i class="fa-regular fa-trash-can"></i>
@@ -170,6 +172,7 @@
 
 
 <script src="main.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>

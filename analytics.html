@@ -10,60 +10,60 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div class="shell">
-<aside class="sidebar">
-<div class="side-logo">
-<span class="logo-icon"><i class="fa-solid fa-leaf"></i></span>
+<body class="app-page analytics-page">
+<div class="app-shell">
+<aside class="app-sidebar">
+<div class="app-sidebar__brand">
+<span class="app-sidebar__brand-icon"><i class="fa-solid fa-leaf"></i></span>
 <span>savewise</span>
 </div>
-<nav class="side-menu">
-<a href="analytics.html" class="side-link on"><i class="fa-solid fa-chart-column"></i>analytics</a>
-<a href="#" class="side-link"><i class="fa-solid fa-plus"></i>add transaction</a>
-<a href="Category.html" class="side-link"><i class="fa-solid fa-list-ul"></i>category</a>
+<nav class="app-sidebar__nav">
+<a href="analytics.html" class="app-sidebar__link app-sidebar__link--active"><i class="fa-solid fa-chart-column"></i>analytics</a>
+<a href="pe.html" class="app-sidebar__link"><i class="fa-solid fa-plus"></i>add transaction</a>
+<a href="Category.html" class="app-sidebar__link"><i class="fa-solid fa-list-ul"></i>category</a>
 </nav>
 </aside>
-<main class="content">
-<header class="page-top">
-<h1>analytics</h1>
-<a href="#" class="btn small">add transaction <i class="fa-solid fa-plus"></i></a>
+<main class="app-content">
+<header class="analytics-top">
+<h1 class="analytics-top__title">analytics</h1>
+<a href="pe.html" class="analytics-add-btn">add transaction <i class="fa-solid fa-plus"></i></a>
 </header>
-<section class="stats">
-<div class="stat">
-<div class="stat-head">
-<div class="stat-icon s1"><i class="fa-solid fa-sack-dollar"></i></div>
-<span class="trend up">+ 12%</span>
+<section class="analytics-stats">
+<div class="analytics-stat">
+<div class="analytics-stat__head">
+<div class="analytics-stat__icon analytics-stat__icon--balance"><i class="fa-solid fa-sack-dollar"></i></div>
+<span class="analytics-stat__trend analytics-stat__trend--up">+ 12%</span>
 </div>
-<p class="stat-label">total balance</p>
-<b class="stat-num">$ 7,550</b>
-<p class="stat-sub">vs last month</p>
+<p class="analytics-stat__label">total balance</p>
+<b class="analytics-stat__value">$ 7,550</b>
+<p class="analytics-stat__sub">vs last month</p>
 </div>
-<div class="stat">
-<div class="stat-head">
-<div class="stat-icon s2"><i class="fa-solid fa-arrow-trend-up"></i></div>
-<span class="trend up">+ 8%</span>
+<div class="analytics-stat">
+<div class="analytics-stat__head">
+<div class="analytics-stat__icon analytics-stat__icon--income"><i class="fa-solid fa-arrow-trend-up"></i></div>
+<span class="analytics-stat__trend analytics-stat__trend--up">+ 8%</span>
 </div>
-<p class="stat-label">total income</p>
-<b class="stat-num">$ 10,000</b>
-<p class="stat-sub">vs last month</p>
+<p class="analytics-stat__label">total income</p>
+<b class="analytics-stat__value">$ 10,000</b>
+<p class="analytics-stat__sub">vs last month</p>
 </div>
-<div class="stat">
-<div class="stat-head">
-<div class="stat-icon s3"><i class="fa-solid fa-arrow-trend-down"></i></div>
-<span class="trend down">- 5%</span>
+<div class="analytics-stat">
+<div class="analytics-stat__head">
+<div class="analytics-stat__icon analytics-stat__icon--expenses"><i class="fa-solid fa-arrow-trend-down"></i></div>
+<span class="analytics-stat__trend analytics-stat__trend--down">- 5%</span>
 </div>
-<p class="stat-label">total expenses</p>
-<b class="stat-num">$ 2,450</b>
-<p class="stat-sub">vs last month</p>
+<p class="analytics-stat__label">total expenses</p>
+<b class="analytics-stat__value">$ 2,450</b>
+<p class="analytics-stat__sub">vs last month</p>
 </div>
-<div class="stat">
-<div class="stat-head">
-<div class="stat-icon s4"><i class="fa-solid fa-piggy-bank"></i></div>
-<span class="trend up">+ 15%</span>
+<div class="analytics-stat">
+<div class="analytics-stat__head">
+<div class="analytics-stat__icon analytics-stat__icon--savings"><i class="fa-solid fa-piggy-bank"></i></div>
+<span class="analytics-stat__trend analytics-stat__trend--up">+ 15%</span>
 </div>
-<p class="stat-label">total savings</p>
-<b class="stat-num">$ 5,100</b>
-<p class="stat-sub">vs last month</p>
+<p class="analytics-stat__label">total savings</p>
+<b class="analytics-stat__value">$ 5,100</b>
+<p class="analytics-stat__sub">vs last month</p>
 </div>
 </section>
 </main>

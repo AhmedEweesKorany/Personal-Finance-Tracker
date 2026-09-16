@@ -3,69 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>project</title>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>SaveWise - Add Transaction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pe.css">
 </head>
-<body>
-  <div class="container">
+<body class="app-page tx-page">
+  <div class="app-shell">
 
-    <div class="sidebar">
-      <h2 class="logo"><i class="fa-solid fa-leaf"></i> SaveWise</h2>
-      <ul>
-        <li><i class="fa-solid fa-house"></i> Dashboard</li>
-        <li class="active"><i class="fa-solid fa-plus"></i> Add Transaction</li>
-        <li><i class="fa-solid fa-folder"></i> Categories</li>
-      </ul>
-      <div class="dark-mode"><i class="fa-solid fa-moon"></i> Dark Mode</div>
-    </div>
+    <!-- SHARED app sidebar (same component as Category / Analytics) -->
+    <aside class="app-sidebar">
+      <div class="app-sidebar__brand">
+        <span class="app-sidebar__brand-icon"><i class="fa-solid fa-leaf"></i></span>
+        <span>savewise</span>
+      </div>
+      <nav class="app-sidebar__nav">
+        <a href="analytics.html" class="app-sidebar__link"><i class="fa-solid fa-chart-column"></i>analytics</a>
+        <a href="pe.html" class="app-sidebar__link app-sidebar__link--active"><i class="fa-solid fa-plus"></i>add transaction</a>
+        <a href="Category.html" class="app-sidebar__link"><i class="fa-solid fa-list-ul"></i>category</a>
+      </nav>
+    </aside>
 
-    
-    <div class="form-section">
-      <div class="form-box">
-        <h2>Add Transaction</h2>
-        <p>Enter the details of your income or expense.</p>
+    <main class="app-content tx-content">
+      <div class="tx-layout">
+        <div class="tx-form-section">
+          <div class="tx-form-box">
+            <h2 class="tx-form-box__title">Add Transaction</h2>
+            <p class="tx-form-box__subtitle">Enter the details of your income or expense.</p>
 
-        <div class="toggle">
-          <button class="active"><i class="fa-solid fa-arrow-down"></i> Income</button>
-          <button><i class="fa-solid fa-arrow-up"></i> Expense</button>
+            <div class="tx-toggle">
+              <button type="button" class="tx-toggle__btn tx-toggle__btn--active"><i class="fa-solid fa-arrow-down"></i> Income</button>
+              <button type="button" class="tx-toggle__btn"><i class="fa-solid fa-arrow-up"></i> Expense</button>
+            </div>
+
+            <form class="tx-form">
+              <label class="tx-form__label">Name</label>
+              <input class="tx-form__input" type="text" placeholder="Salary">
+
+              <label class="tx-form__label">Amount</label>
+              <input class="tx-form__input" type="number" placeholder="$0.00">
+
+              <label class="tx-form__label">Category</label>
+              <select class="tx-form__input">
+                <option>Select category</option>
+              </select>
+
+              <label class="tx-form__label">Date</label>
+              <input class="tx-form__input" type="date">
+
+              <label class="tx-form__label">Description (optional)</label>
+              <textarea class="tx-form__input tx-form__textarea" placeholder="Add a note..."></textarea>
+
+              <button class="tx-submit"><i class="fa-solid fa-leaf"></i> Add Transaction</button>
+            </form>
+          </div>
         </div>
 
-        <form>
-          <label>Name</label>
-          <input type="text" placeholder="Salary">
-
-          <label>Amount</label>
-          <input type="number" placeholder="$0.00">
-
-          <label>Category</label>
-          <select>
-            <option>Select category</option>
-          </select>
-
-          <label>Date</label>
-          <input type="date">
-
-          <label>Description (optional)</label>
-          <textarea placeholder="Add a note..."></textarea>
-
-          <button class="submit"><i class="fa-solid fa-leaf"></i> Add Transaction</button>
-        </form>
+        <div class="tx-categories">
+          <h3 class="tx-categories__title">Popular Categories</h3>
+          <ul class="tx-categories__list">
+            <li class="tx-categories__item"><i class="fa-solid fa-money-bill"></i><div>Salary <span class="tx-categories__sub">Monthly income</span></div></li>
+            <li class="tx-categories__item"><i class="fa-solid fa-briefcase"></i><div>Business <span class="tx-categories__sub">Business earnings</span></div></li>
+            <li class="tx-categories__item"><i class="fa-solid fa-laptop-code"></i><div>Freelance <span class="tx-categories__sub">Freelance work</span></div></li>
+            <li class="tx-categories__item"><i class="fa-solid fa-gift"></i><div>Gift <span class="tx-categories__sub">Gifts & surprises</span></div></li>
+            <li class="tx-categories__item"><i class="fa-solid fa-ellipsis"></i><div>Other <span class="tx-categories__sub">Other income</span></div></li>
+          </ul>
+        </div>
       </div>
-    </div>
-
-
-    <div class="categories">
-      <h3>Popular Categories</h3>
-      <ul>
-        <li><i class="fa-solid fa-money-bill"></i> Salary <span>Monthly income</span></li>
-        <li><i class="fa-solid fa-briefcase"></i> Business <span>Business earnings</span></li>
-        <li><i class="fa-solid fa-laptop-code"></i> Freelance <span>Freelance work</span></li>
-        <li><i class="fa-solid fa-gift"></i> Gift <span>Gifts & surprises</span></li>
-        <li><i class="fa-solid fa-ellipsis"></i> Other <span>Other income</span></li>
-      </ul>
-    </div>
+    </main>
   </div>
 </body>
 </html>

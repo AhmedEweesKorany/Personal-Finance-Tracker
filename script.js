@@ -1,9 +1,8 @@
-let addBtn=document.querySelector(".container button")
-let conCards=document.getElementsByClassName("container-cards")[0]
+let addBtn = document.querySelector(".category-head__add-btn")
+let conCards = document.getElementsByClassName("category-cards")[0]
 
-let divInput=document.getElementsByClassName("div-input")[0]
-let input1=document.getElementsByClassName("input1")[0]
-let input2=document.getElementsByClassName("input2")[0]
+let input1 = document.getElementsByClassName("category-add-form__input--name")[0]
+let input2 = document.getElementsByClassName("category-add-form__input--count")[0]
 let categoryTitle;
 let transNum;
 
@@ -11,24 +10,24 @@ let transNum;
 
 function addCategory(){
 
-    categoryTitle=input1.value
-    transNum=input2.value
+    categoryTitle = input1.value.trim()
+    transNum = input2.value.trim()
 
-     
+    if (!categoryTitle) return
 
+      conCards.innerHTML += `<div class="category-card">
 
-      conCards.innerHTML +=`<div class="card">
-                
-                <div class="card-top">
-                  <h2>${categoryTitle}</h2>
-                  <p>${transNum} transactions</p>
+                <i class="fa-solid fa-ellipsis category-card__icon category-card__icon--other"></i>
+                <div class="category-card__meta">
+                  <h2 class="category-card__name">${categoryTitle}</h2>
+                  <p class="category-card__count">${transNum || 0} transactions</p>
                 </div>
-                
-
-                <hr>
 
 
-                <div class="card-icons">
+                <hr class="category-card__divider">
+
+
+                <div class="category-card__actions">
 
                 <i class="fa-solid fa-pen"></i>
                 <i class="fa-regular fa-trash-can"></i>
@@ -38,8 +37,8 @@ function addCategory(){
 
 
 
-            input1.value=""
-            input2.value=""
+            input1.value = ""
+            input2.value = ""
 }
 
 
@@ -50,4 +49,8 @@ function addCategory(){
 
 
 
-addBtn.addEventListener("click",addCategory)
+
+
+if (addBtn && conCards && input1 && input2) {
+addBtn.addEventListener("click", addCategory)
+}
