@@ -58,9 +58,6 @@ function makeId() {
 
 
 function formatMoney(num) {
-  num = Number(num);
-  if (isNaN(num)) num = 0;
-
   if (Number.isInteger(num)) {
     return "$ " + num.toLocaleString("en-US");
   }
