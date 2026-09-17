@@ -77,6 +77,40 @@ nameInput.addEventListener("keydown", function (e) {
   }
 });
 
+cardsBox.addEventListener("click", function (e) {
+  let btn = e.target.closest("[data-action]");
+  if (btn == null) return;
+  let card = btn.closest(".category-card");
+  if (card == null) return;
 
+  let id = card.getAttribute("data-id");
+  let action = btn.getAttribute("data-action");
+  let cats = getCategories();
+
+  if (action == "edit") {
+    for (let i = 0; i < cats.length; i++) {
+      if (cats[i].id == id) {
+        editId = id;
+        nameInput.value = cats[i].name;
+        iconInput.value = cats[i].icon;
+        addBtn.innerHTML = '<i class="fa-solid fa-pen"></i> update category';
+        nameInput.focus();
+        break;
+      }
+    }
+    return;
+  }
+
+  if (action == "delete") {
+    if (confirm("Delete this category?") == false) return;
+    let kept = [];
+    for (let i = 0; i < cats.length; i++) {
+      if (cats[i].id != id) kept.push(cats[i]);
+    }
+    saveCategories(kept);
+    if (editId == id) resetForm();
+    renderCategories();
+  }
+});
 
 renderCategories();
