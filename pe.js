@@ -12,14 +12,22 @@ let historyBox = document.querySelector(".tx-history__list");
 let emptyMsg = document.querySelector(".tx-history__empty");
 let type = "income";
 
+
+
+
 function today() {
   let d = new Date();
   let m = d.getMonth() + 1;
   let day = d.getDate();
+
   if (m < 10) m = "0" + m;
+
   if (day < 10) day = "0" + day;
   return d.getFullYear() + "-" + m + "-" + day;
 }
+
+
+
 
 function showError(msg) {
   if (msg == "") {
@@ -56,6 +64,9 @@ function loadCats() {
   catField.innerHTML = html;
 }
 
+
+
+
 function catName(id) {
   let cats = getCategories();
   for (let i = 0; i < cats.length; i++) {
@@ -63,6 +74,9 @@ function catName(id) {
   }
   return "-";
 }
+
+
+
 
 function renderHistory() {
   let txs = getTransactions();
